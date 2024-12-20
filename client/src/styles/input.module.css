@@ -1,0 +1,80 @@
+.input {
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    padding: var(--padding) 0;
+    font-family: var(--font-poppins), Serif, sans-serif;
+    font-size: var(--font-size-small);
+    border-bottom: 1px solid var(--black);
+}
+
+.input:focus {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+[type="file"] {
+    border: none;
+}
+
+.input-file input[type=file] {
+    display: none;
+}
+
+.input-file label {
+    font-family: var(--font-poppins), Serif, sans-serif;
+    font-size: var(--font-size-small);
+    cursor: pointer;
+}
+
+.input-file label:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.input-checkbox {
+    width: fit-content;
+    background-color: var(--info);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.input-checkbox:hover {
+    background-color: var(--white);
+    border: solid 1px var(--info);
+}
+
+.input-checkbox_checked {
+    background-color: var(--primary);
+}
+
+.input-checkbox:hover label {
+    color: var(--info);
+}
+
+.input-checkbox label {
+    color: var(--white);
+    font-family: var(--font-poppins), Serif, sans-serif;
+    font-size: var(--font-size-small);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.file-name {
+    font-family: var(--font), sans-serif;
+    font-size: var(--font-size-medium);
+    color: var(--info);
+    padding: 0 var(--padding);
+}
+
+.form-select {
+    margin: var(--margin) 0;
+    padding: var(--padding) 0;
+    width: 100%;
+    font-family: var(--font-poppins), Serif, sans-serif;
+}

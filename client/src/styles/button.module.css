@@ -1,0 +1,56 @@
+@import '../styles/_globals.css';
+
+button {
+    border: none;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.link-button {
+    width: 100%;
+    /*margin: var(--margin);*/
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-light);
+}
+
+.link-button a {
+    text-decoration: none;
+    font-size: var(--font-size-medium);
+    color: var(--white);
+    font-family: var(--font), sans-serif;
+}
+
+.link-button:hover a {
+    color: var(--primary-light);
+}
+
+.submit {
+    width: 100%;
+    background-color: var(--primary);
+    font-family: var(--font), Serif, sans-serif;
+    font-size: var(--font-size-medium);
+    color: var(--white);
+}
+
+.link-button:hover, .submit:hover {
+    background-color: var(--white);
+    border: 1px solid var(--primary-light);
+    color: var(--primary);
+}
+
+.logout-button {
+    outline: none;
+    display: flex;
+    gap: var(--spacing);
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font), sans-serif;
+    background: none;
+}
+
+.logout-button:hover {
+    color: var(--orange-dark);
+    text-decoration: underline;
+}

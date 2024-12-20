@@ -1,0 +1,25 @@
+.toast-wrapper {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    padding: 0 var(--padding);
+    border-radius: var(--border-radius);
+    color: var(--white);
+}
+
+.loading, .info {
+    background-color: var(--info);
+    z-index: -1;
+}
+
+.success {
+    background-color: var(--success);
+    z-index: 99;
+}
+
+.error, .failure {
+    background-color: var(--error);
+    z-index: 99;
+}

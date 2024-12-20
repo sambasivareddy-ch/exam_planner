@@ -1,0 +1,48 @@
+.home {
+    width: 100%;
+    height: 100vh;
+}
+
+.banner {
+    display: block;
+    background-color: var(--light-gray);
+    z-index: 1;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-container > button {
+    width: 150px;
+}
+
+.sub-nav_container {
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 1fr 1fr;
+    border: solid 1px var(--primary);
+    gap: 5px;
+    padding: var(--padding);
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 800px) {
+    .banner {
+        display: none;
+    }
+    .nav-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        grid-column: span 2;
+    }
+    .sub-nav_container {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+}

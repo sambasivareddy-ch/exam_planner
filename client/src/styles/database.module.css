@@ -1,0 +1,63 @@
+.database-wrapper {
+    width: 100%;
+}
+
+.database-header_nav {
+    margin: var(--margin) 0;
+}
+
+.database-header_nav button {
+    padding: var(--padding);
+    margin: 0 calc(var(--margin)/2);
+    font-family: var(--font-poppins), Serif, sans-serif;
+}
+
+.btn-selected {
+    background-color: var(--primary-light);
+    color: white;
+}
+
+.upload {
+    width: 100%;
+    height: 100vh;
+}
+
+.upload-container {
+    width: 80%;
+    height: fit-content;
+    margin-top: 5rem;
+}
+
+.upload-container .upload-container__header, .upload-container li {
+    font-family: var(--font-poppins), serif;
+}
+
+.upload-container li {
+    font-size: var(--font-size-small);
+    margin: 10px 0;
+}
+
+.upload-container__header {
+    border-right: solid 2px var(--light-gray);
+}
+
+.edit-student_info {
+    width: 300px;
+}
+
+.edit-student_info form {
+    width: 100%;
+    height: fit-content;
+}
+
+@media screen and (max-width: 800px) {
+    .upload-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .upload-container__header {
+        border-bottom: solid 2px var(--light-gray);
+        border-right: none;
+    }
+}

@@ -1,0 +1,14 @@
+.student-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.student-form {
+    width: 400px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.student-exam__details {
+    margin-top: var(--margin);
+}
