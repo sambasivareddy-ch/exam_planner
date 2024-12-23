@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+    frontend:
+        build:
+            context: ./client
+            dockerfile: Dockerfile
+        ports:
+            - "3000:80"
+        depends_on:
+            - backend
+    
+    backend:
+        build:
+            context: ./server
+            dockerfile: Dockerfile
+        environment:
+            PG_HOST: postgres
+            PG_USER: samba
+            PG_PASSWORD: s@mb@$!v@Ch!nt@123
+            PG_DATABASE: app_db
+            PG_PORT: 5432
+        ports:
+            - "8080:8080"
+        depends_on:
+            - postgres
+        command: ["dockerize", "-wait", "tcp://postgres:5432", "-timeout", "60s", "npm", "start"]
+    
+    postgres:
+        image: postgres:15
+        container_name: postgres
+        environment:
+            POSTGRES_USER: samba
+            POSTGRES_PASSWORD: s@mb@$!v@Ch!nt@123
+            POSTGRES_DB: app_db
+        ports:
+            - "5432:5432"
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+
+volumes:
+    postgres_data:

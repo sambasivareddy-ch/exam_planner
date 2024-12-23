@@ -1,9 +1,11 @@
 import postgres from 'pg';
 import dotenv from 'dotenv';
 
+import __dirname from '../dirname.js'
+
 // Config Database Credentials
 dotenv.config({
-    path: "/Users/samba-17793/Projects/exam_planner/server/config/.db.env"
+    path: `${__dirname} + /config/.db.env`
 });
 
 const { Client } = postgres;
