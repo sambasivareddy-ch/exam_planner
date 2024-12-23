@@ -1,9 +1,9 @@
-.student-container {
+.student-container, .invigilator-container {
     width: 100%;
     height: 100vh;
 }
 
-.student-form {
+.student-form, .invigilator-form {
     width: 400px;
     height: fit-content;
     box-sizing: border-box;
