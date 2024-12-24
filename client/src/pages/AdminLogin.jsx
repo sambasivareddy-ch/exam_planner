@@ -62,7 +62,9 @@ const AdminLogin = (props) => {
 
         setIsLoading(true);
         try {
-            const res = await fetch("http://localhost:8080/admin-login/", {
+            const serverURL = process.env.REACT_APP_SERVER_URL || 'http://localhost:8080';
+
+            const res = await fetch(`${serverURL}/admin-login/`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

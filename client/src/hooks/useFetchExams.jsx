@@ -6,7 +6,9 @@ const useFetchExams = () => {
     useEffect(() => {
         const getExaminations = async () => {
             try {
-                const res = await fetch('http://localhost:8080/get-examinations', {
+                const serverURL = process.env.REACT_APP_SERVER_URL || 'http://localhost:8080';
+
+                const res = await fetch(`${serverURL}/get-examinations`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

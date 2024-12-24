@@ -35,8 +35,10 @@ const EditPlan = (props) => {
     const submitHandler = async (e) => {
         e.preventDefault();
 
+        const serverURL = process.env.REACT_APP_SERVER_URL || 'http://localhost:8080';
+
         await fetchApi(
-            "http://localhost:8080/edit-exam",
+            `${serverURL}/edit-exam`,
             "PUT",
             JSON.stringify(toBeModified)
         );

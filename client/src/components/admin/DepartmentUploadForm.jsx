@@ -28,7 +28,9 @@ const DepartmentUploadForm = (props) => {
         try {
             setIsUploading(true);
 
-            const res = await fetch("http://localhost:8080/edit-dept", {
+            const serverURL = process.env.REACT_APP_SERVER_URL || 'http://localhost:8080';
+
+            const res = await fetch(`${serverURL}/edit-dept`, {
                 method: "POST",
                 body: formData,
             })

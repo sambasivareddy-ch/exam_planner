@@ -1,0 +1,6 @@
+POST https://studious-happiness-r44r9rp46qw43xw4g-8080.app.github.dev/create-admin
+
+{
+    admin_email: "sambachinta.24@gmail.com",
+    admin_password: "your_password"
+}

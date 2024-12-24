@@ -22,7 +22,9 @@ const CancelExam = (props) => {
     const submitHandler = async (e) => {
         e.preventDefault();
 
-        await fetchApi('http://localhost:8080/cancel-exam', "DELETE", JSON.stringify({
+        const serverURL = process.env.REACT_APP_SERVER_URL || 'http://localhost:8080';
+
+        await fetchApi(`${serverURL}/cancel-exam`, "DELETE", JSON.stringify({
             exam_id: toBeCancelledId,
         }));
     };

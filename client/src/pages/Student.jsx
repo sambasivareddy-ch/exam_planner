@@ -19,7 +19,9 @@ const Student = () => {
         const student_roll_number = student_rollRef.current.value;
 
         try {
-            const response = await fetch(`http://localhost:8080/student-exam/${student_roll_number}`, {
+            const serverURL = process.env.REACT_APP_SERVER_URL || 'http://localhost:8080';
+
+            const response = await fetch(`${serverURL}/student-exam/${student_roll_number}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

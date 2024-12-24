@@ -4,7 +4,7 @@ export const DEPARTMENT_TABLE =
         (
             DEPT_ID BIGSERIAL, 
             DEPT_NAME VARCHAR(25),
-            PRIMARY KEY (DEPT_ID, DEPT_NAME)
+            PRIMARY KEY (DEPT_ID)
         );
     `
 
@@ -55,7 +55,7 @@ export const EXAM_PLAN_TABLE =
             EXAM_PLAN_ID BIGSERIAL,
             EXAM_NAME VARCHAR(40),
             EXAM_DATE DATE NOT NULL,
-            PRIMARY KEY(EXAM_PLAN_ID, EXAM_DATE)
+            PRIMARY KEY(EXAM_PLAN_ID)
         )
     `
 

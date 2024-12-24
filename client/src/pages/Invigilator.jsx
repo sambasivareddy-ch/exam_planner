@@ -19,7 +19,10 @@ const Invigilator = () => {
         const email_address = emailRef.current.value;
 
         try {
-            const response = await fetch(`http://localhost:8080/invigilator-schedule/${email_address}`, {
+
+            const serverURL = process.env.REACT_APP_SERVER_URL || 'http://localhost:8080';
+
+            const response = await fetch(`${serverURL}/invigilator-schedule/${email_address}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

@@ -50,7 +50,9 @@ const PlanExam = (props) => {
             }
         }
 
-        await fetchApi("http://localhost:8080/plan-exam", "POST", JSON.stringify({
+        const serverURL = process.env.REACT_APP_SERVER_URL || 'http://localhost:8080';
+        
+        await fetchApi(`${serverURL}/plan-exam`, "POST", JSON.stringify({
             exam_name,
             exam_date,
             no_of_rooms,

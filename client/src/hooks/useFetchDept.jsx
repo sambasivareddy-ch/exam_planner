@@ -6,7 +6,9 @@ const useFetchDept = () => {
     useEffect(() => {
         const getDepartments = async () => {
             try {
-                const res = await fetch('http://localhost:8080/get-departments', {
+                const serverURL = process.env.REACT_APP_SERVER_URL | 'http://localhost:8080';
+
+                const res = await fetch(`${serverURL}/get-departments`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

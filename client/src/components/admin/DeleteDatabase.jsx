@@ -24,8 +24,10 @@ const DeleteDatabase = () => {
     const formSubmitHandler = async (e) => {
         e.preventDefault();
 
+        const serverURL = process.env.REACT_APP_SERVER_URL || 'http://localhost:8080'
+
         await fetchApi(
-            "http://localhost:8080/delete-department",
+            `${serverURL}/delete-department`,
             "DELETE",
             JSON.stringify({
                 dept_id: toBeModified.dept_id,
